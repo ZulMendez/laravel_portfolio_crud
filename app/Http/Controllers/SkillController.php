@@ -12,26 +12,18 @@ class SkillController extends Controller
         return view('backoffice.skills.skill', compact('skill'));
     }
     public function create(){
-        return view('backoffice.skill.createSkill');
+        return view('backoffice.skills.createSkill');
     }
     public function store(Request $request){
         $skill = new Skill();
         request()->validate([
-            "html" => ["required", "numeric"],
-            "css" => ["required", "numeric"],
-            "javascript" => ["required", "numeric"],
-            "php" => ["required", "numeric"],
-            "cms" => ["required", "numeric"],
-            "photoshop" => ["required", "numeric"],
+            "compet" => ["required", "min:3", "max:100"],
+            "pourcent" => ["required", "numeric"],
         ]);
-        $skill->html = $request->html;
-        $skill->css = $request->css;
-        $skill->javascript = $request->javascript;
-        $skill->php = $request->php;
-        $skill->cms = $request->cms;
-        $skill->photoshop = $request->photoshop;
+        $skill->compet = $request->compet;
+        $skill->pourcent = $request->pourcent;
         $skill->save();
-        return redirect()->route('skills.index');
+        return redirect()->route('skills.index')->with('success', 'Infos bien ajoutés');
     }
     public function destroy(Skill $id){
         $id->delete();
@@ -39,29 +31,21 @@ class SkillController extends Controller
     }
     public function show(Skill $id){
         $skill = $id;
-        return view('backoffice.skill.showSkill', compact('skill'));
+        return view('backoffice.skills.showSkill', compact('skill'));
     }
     public function edit(Skill $id){
         $skill = $id;
-        return view('backoffice.skill.editSkill', compact('skill'));
+        return view('backoffice.skills.editSkill', compact('skill'));
     }
     public function update(Skill $id, Request $request){
         request()->validate([
-            "html" => ["required", "numeric"],
-            "css" => ["required", "numeric"],
-            "javascript" => ["required", "numeric"],
-            "php" => ["required", "numeric"],
-            "cms" => ["required", "numeric"],
-            "photoshop" => ["required", "numeric"],
+            "compet" => ["required", "min:3", "max:100"],
+            "pourcent" => ["required", "numeric"],
         ]);
         $skill = $id;
-        $skill->html = $request->html;
-        $skill->css = $request->css;
-        $skill->javascript = $request->javascript;
-        $skill->php = $request->php;
-        $skill->cms = $request->cms;
-        $skill->photoshop = $request->photoshop;
+        $skill->compet = $request->compet;
+        $skill->pourcent = $request->pourcent;
         $skill->save();
-        return redirect('/backoffice/skill/' . $skill->id)->with('success', "vos modifications ont bien été mis à jour");
+        return redirect()->route('skills.show', $skill->id)->with('success', "vos modifications ont bien été mis à jour");
     }
 }

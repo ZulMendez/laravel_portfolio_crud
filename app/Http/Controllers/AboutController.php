@@ -17,8 +17,6 @@ class AboutController extends Controller
     public function store(Request $request){
         $about = new About();
         request()->validate([
-            // "soustitre" => ["required", "min:3", "max:100"],
-            // "description" => ["required", "min:3", "max:500"],
             "birthday" => ["required", "min:3", "max:100"],
             "website" => ["required", "min:3", "max:100"],
             "phone" => ["required", "numeric"],
@@ -28,8 +26,6 @@ class AboutController extends Controller
             "email" => ["required", "email", "min:3", "max:50"],
             "freelance" => ["required", "min:3", "max:50"],
         ]);
-        // $about->soustitre = $request->soustitre;
-        // $about->description = $request->description;
         $about->birthday = $request->birthday;
         $about->website = $request->website;
         $about->phone = $request->phone;
@@ -39,7 +35,7 @@ class AboutController extends Controller
         $about->email = $request->email;
         $about->freelance = $request->freelance;
         $about->save();
-        return redirect()->route('abouts.index');
+        return redirect()->route('abouts.index')->with('success', 'Infos bien ajoutés');
     }
     public function destroy(About $id){
         $id->delete();
@@ -55,8 +51,6 @@ class AboutController extends Controller
     }
     public function update(About $id, Request $request){
         request()->validate([
-            // "soustitre" => ["required", "min:3", "max:100"],
-            // "description" => ["required", "min:3", "max:500"],
             "birthday" => ["required", "min:3", "max:100"],
             "website" => ["required", "min:3", "max:100"],
             "phone" => ["required", "numeric"],
@@ -67,8 +61,6 @@ class AboutController extends Controller
             "freelance" => ["required", "min:3", "max:50"],
         ]);
         $about = $id;
-        // $about->soustitre = $request->soustitre;
-        // $about->description = $request->description;
         $about->birthday = $request->birthday;
         $about->website = $request->website;
         $about->phone = $request->phone;
@@ -78,6 +70,6 @@ class AboutController extends Controller
         $about->email = $request->email;
         $about->freelance = $request->freelance;
         $about->save();
-        return redirect('/backoffice/about/' . $about->id)->with('success', "vos modifications ont bien été mis à jour");
+        return redirect()->route('abouts.show', $about->id)->with('success', "vos modifications ont bien été mis à jour");
     }
 }

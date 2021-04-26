@@ -21,7 +21,7 @@ class CreateAboutsTable extends Migration
             // $table->text('description');
             $table->string('birthday', 30);
             $table->string('website', 30);
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('city', 30);
             $table->integer('age');
             $table->string('degree', 30);

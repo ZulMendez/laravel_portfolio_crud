@@ -25,7 +25,7 @@ class ContactController extends Controller
         $contact->email = $request->email;
         $contact->call = $request->call;
         $contact->save();
-        return redirect()->route('contacts.index');
+        return redirect()->route('contacts.index')->with('success', 'Infos bien ajoutés');
     }
     public function destroy(Contact $id){
         $id->delete();
@@ -33,11 +33,11 @@ class ContactController extends Controller
     }
     public function show(Contact $id){
         $contact = $id;
-        return view('backoffice.contact.showContact', compact('contact'));
+        return view('backoffice.contacts.showContact', compact('contact'));
     }
     public function edit(Contact $id){
         $contact = $id;
-        return view('backoffice.contact.editContact', compact('contact'));
+        return view('backoffice.contacts.editContact', compact('contact'));
     }
     public function update(Contact $id, Request $request){
         request()->validate([
@@ -50,6 +50,6 @@ class ContactController extends Controller
         $contact->email = $request->email;
         $contact->call = $request->call;
         $contact->save();
-        return redirect('/backoffice/contact/' . $contact->id)->with('success', "vos modifications ont bien été mis à jour");
+        return redirect()->route('contacts.show', $contact->id)->with('success', "vos modifications ont bien été mis à jour");
     }
 }

@@ -19,27 +19,27 @@
                     <div class="col-6"> 
                         <div class="card text-center mx-auto my-3">
                             <div class="card-body">
-                                <h4 class="card-title">Modification about</h4>
-                                <p class="card-text">CRUD about</p>
-                                <a class="btn bg-success" href="">SKILLS</a>
+                                <h4 class="card-title">Modification skills</h4>
+                                <p class="card-text">CRUD SKILLS</p>
+                                <a class="btn bg-success" href={{route('skills.index')}}>SKILLS</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6"> 
                         <div class="card text-center mx-auto my-3">
                             <div class="card-body">
-                                <h4 class="card-title">Modification product</h4>
-                                <p class="card-text">CRUD product</p>
-                                <a class="btn bg-success" href="">PROJECTS</a>
+                                <h4 class="card-title">Modification projets</h4>
+                                <p class="card-text">CRUD PROJETS</p>
+                                <a class="btn bg-success" href={{route('projets.index')}}>PROJECTS</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 "> 
                         <div class="card text-center mx-auto my-3">
                             <div class="card-body">
-                                <h4 class="card-title">Modification store</h4>
-                                <p class="card-text">CRUD store</p>
-                                <a class="btn bg-success" href="">CONTACT</a>
+                                <h4 class="card-title">Modification contact</h4>
+                                <p class="card-text">CRUD CONTACT</p>
+                                <a class="btn bg-success" href={{route('contacts.index')}}>CONTACT</a>
                             </div>
                         </div>
                     </div>

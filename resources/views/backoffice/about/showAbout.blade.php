@@ -1,9 +1,9 @@
 @extends('layouts.back')
 
+@include('layouts.flash')
 @section('content')
     <div>
-        <h1>{{$about->soustitre}}</h1>
-        <p class="card-text">{{$about->description}}</p>
+        <h1>About</h1>
         <a href="{{route('abouts.index')}}">Retour About</a>
         <div class="card" style="width: 18rem;">
             <div class="card-body">

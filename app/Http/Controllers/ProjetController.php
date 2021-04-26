@@ -12,7 +12,7 @@ class ProjetController extends Controller
         return view('backoffice.projets.projet', compact('projet'));
     }
     public function create(){
-        return view('backoffice.projet.createProjet');
+        return view('backoffice.projets.createProjet');
     }
     public function store(Request $request){
         $projet = new Projet();
@@ -21,7 +21,7 @@ class ProjetController extends Controller
         ]);
         $projet->img = $request->img;
         $projet->save();
-        return redirect()->route('projets.index');
+        return redirect()->route('projets.index')->with('success', 'Infos bien ajoutés');
     }
     public function destroy(Projet $id){
         $id->delete();
@@ -29,11 +29,11 @@ class ProjetController extends Controller
     }
     public function show(Projet $id){
         $projet = $id;
-        return view('backoffice.projet.showProjet', compact('projet'));
+        return view('backoffice.projets.showProjet', compact('projet'));
     }
     public function edit(Projet $id){
         $projet = $id;
-        return view('backoffice.projet.editProjet', compact('projet'));
+        return view('backoffice.projets.editProjet', compact('projet'));
     }
     public function update(Projet $id, Request $request){
         request()->validate([
@@ -42,6 +42,6 @@ class ProjetController extends Controller
         $projet = $id;
         $projet->img = $request->img;
         $projet->save();
-        return redirect('/backoffice/projet/' . $projet->id)->with('success', "vos modifications ont bien été mis à jour");
+        return redirect()->route('projets.show', $projet->id)->with('success', "vos modifications ont bien été mis à jour");
     }
 }

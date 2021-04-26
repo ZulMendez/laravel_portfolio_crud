@@ -16,14 +16,33 @@ class SkillSeeder extends Seeder
     {
         DB::table('skills')->insert([
             [
-                "titre" => "Skills",
-                "description" => "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
-                "html" => 100,
-                "css" => 90,
-                "javascript" => 75,
-                "php" => 80,
-                "cms" => 90,
-                "photoshop" => 55,
+                "compet" => "html",
+                "pourcent" => 100,
+                "created_at" => now(),
+            ],
+            [
+                "compet" => "css",
+                "pourcent" => 90,
+                "created_at" => now(),
+            ],
+            [
+                "compet" => "javascript",
+                "pourcent" => 75,
+                "created_at" => now(),
+            ],
+            [
+                "compet" => "php",
+                "pourcent" => 80,
+                "created_at" => now(),
+            ],
+            [
+                "compet" => "cms",
+                "pourcent" => 90,
+                "created_at" => now(),
+            ],
+            [
+                "compet" => "photoshop",
+                "pourcent" => 55,
                 "created_at" => now(),
             ],
         ]);

@@ -20,7 +20,7 @@
       
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
           @foreach ($projets as $projet)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-active d-flex">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
       
             <div class="portfolio-wrap">
               <img src={{$projet->img}} class="img-fluid" alt="">
@@ -29,8 +29,7 @@
                   <a href={{asset('img/portfolio/portfolio-1.jpg')}} data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
-                {{-- <a href={{route('portfolio.show', $portfolio->id)}} class="btn btn-primary mx-3">show</a> --}}
-                {{-- <a href='' class="btn btn-success">edit</a> --}}
+                
               </div>
             </div>
           </div>
