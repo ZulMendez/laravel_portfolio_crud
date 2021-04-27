@@ -4,7 +4,7 @@
 <main id="" class="">
     <section class="">
         <div class="container">
-            <h1>Formulaire d'ajout</h1>
+            <h1 class="text-center">Formulaire d'ajout</h1>
             <a href="{{route('abouts.index')}}">Retour About</a>
             <form class="" method="POST" action={{route('abouts.store')}}>
                 @csrf

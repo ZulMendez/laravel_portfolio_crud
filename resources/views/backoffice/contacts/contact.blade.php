@@ -5,7 +5,7 @@
 <div class="container my-5">
     <h1 class="text-center">Page Contact</h1>
     <div class="d-flex justify-content-around my-2">
-        <a class="btn btn-outline-primary" href={{route('projets.create')}}>Ajouter un item</a>
+        <a class="btn btn-outline-primary" href={{route('contacts.create')}}>Ajouter un item</a>
         <a class="btn btn-outline-secondary" href={{route('admin')}}>Retour backoffice</a>
     </div>
     <div class="container">
@@ -37,8 +37,8 @@
                         </div>
                     </div>
                     
-                    <a href="{{route('contacts.show', $item->id)}}" class="btn btn-primary">DETAILS</a>
-                    <a href="{{route('contacts.edit', $item->id)}}" class="btn btn-success">EDIT</a>
+                    <a href="{{route('contacts.show', $item->id)}}" class="btn btn-success">DETAILS</a>
+                    <a href="{{route('contacts.edit', $item->id)}}" class="btn btn-primary">EDIT</a>
                     <form method="post" action={{route('contacts.destroy', $item->id)}}>
                         @csrf
                         @method('DELETE')

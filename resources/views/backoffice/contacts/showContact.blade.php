@@ -5,7 +5,7 @@
 <section id="contact" class="contact">
     <div class="container text-center">
         <h1>Contact</h1>
-        <a href="{{route('contacts.index')}}">Retour Contact</a>
+        <a class="btn btn-outline-secondary mb-2" href="{{route('contacts.index')}}">Retour Contact</a>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><strong>Location: </strong> {{$contact->location}}</h5>

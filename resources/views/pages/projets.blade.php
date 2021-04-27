@@ -20,7 +20,7 @@
       
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
           @foreach ($projets as $projet)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item {{$projet->filter}}">
       
             <div class="portfolio-wrap">
               <img src={{$projet->img}} class="img-fluid" alt="">

@@ -3,7 +3,9 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FactController;
 use App\Http\Controllers\ProjetController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Route;
 
@@ -103,3 +105,41 @@ Route::get('/backoffice/contact/deleteAll', [ContactController::class, 'destroyA
 // edit
 Route::get('/backoffice/contact/{id}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
 Route::put('/backoffice/contact/{id}/update', [ContactController::class, 'update'])->name('contacts.update');
+
+// ________________________________________________________________________________________________
+// FACTS
+Route::get('/backoffice/facts', [FactController::class, 'index'])->name('facts.index');
+
+// create
+Route::get('/backoffice/facts/create', [FactController::class, 'create'])->name('facts.create');
+Route::post('/backoffice/facts/store', [FactController::class, 'store'])->name('facts.store');
+
+// show
+Route::get('/backoffice/facts/{id}', [FactController::class, 'show'])->name('facts.show');
+
+// delete
+Route::delete('/backoffice/facts/{id}/delete', [FactController::class, 'destroy'])->name('facts.destroy');
+Route::get('/backoffice/facts/deleteAll', [FactController::class, 'destroyAll'])->name('facts.destroyAll');
+
+// edit
+Route::get('/backoffice/facts/{id}/edit', [FactController::class, 'edit'])->name('facts.edit');
+Route::put('/backoffice/facts/{id}/update', [FactController::class, 'update'])->name('facts.update');
+
+// ________________________________________________________________________________________________
+// SERVICES
+Route::get('/backoffice/servs', [ServiceController::class, 'index'])->name('servs.index');
+
+// create
+Route::get('/backoffice/servs/create', [ServiceController::class, 'create'])->name('servs.create');
+Route::post('/backoffice/servs/store', [ServiceController::class, 'store'])->name('servs.store');
+
+// show
+Route::get('/backoffice/servs/{id}', [ServiceController::class, 'show'])->name('servs.show');
+
+// delete
+Route::delete('/backoffice/servs/{id}/delete', [ServiceController::class, 'destroy'])->name('servs.destroy');
+Route::get('/backoffice/servs/deleteAll', [ServiceController::class, 'destroyAll'])->name('servs.destroyAll');
+
+// edit
+Route::get('/backoffice/servs/{id}/edit', [ServiceController::class, 'edit'])->name('servs.edit');
+Route::put('/backoffice/servs/{id}/update', [ServiceController::class, 'update'])->name('servs.update');

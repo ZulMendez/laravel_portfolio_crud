@@ -4,8 +4,8 @@
 <main id="" class="">
     <section class="">
         <div class="container">
-            <h1>Formulaire d'ajout</h1>
-            <a href="{{route('contacts.index')}}">Retour Contact</a>
+            <h1 class="text-center">Formulaire d'ajout</h1>
+            <a class="btn btn-outline-secondary mb-2" href="{{route('contacts.index')}}">Retour Contact</a>
             <form class="" method="POST" action={{route('contacts.store')}}>
                 @csrf
                 <label for="location">location</label>

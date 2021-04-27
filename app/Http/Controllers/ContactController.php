@@ -12,7 +12,7 @@ class ContactController extends Controller
         return view('backoffice.contacts.contact', compact('contact'));
     }
     public function create(){
-        return view('backoffice.contact.createContact');
+        return view('backoffice.contacts.createContact');
     }
     public function store(Request $request){
         $contact = new Contact();

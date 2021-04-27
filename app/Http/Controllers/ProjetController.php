@@ -18,8 +18,10 @@ class ProjetController extends Controller
         $projet = new Projet();
         request()->validate([
             "img" => ["required", "min:3", "max:100"],
+            "filter" => ["required", "min:3", "max:100"],
         ]);
         $projet->img = $request->img;
+        $projet->filter = $request->filter;
         $projet->save();
         return redirect()->route('projets.index')->with('success', 'Infos bien ajoutés');
     }

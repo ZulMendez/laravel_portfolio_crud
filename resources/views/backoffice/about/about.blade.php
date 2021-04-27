@@ -9,6 +9,9 @@
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{{asset('/img/profile-img.jpg')}}" class="img-fluid" alt="">
+          </div>
             @foreach ($about as $item)
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                 <h3>UI/UX Designer || Web Developer.</h3>
@@ -33,8 +36,8 @@
                     </ul>
                   </div>
                   <div class="">
-                    <a href="{{route('abouts.show', $item->id)}}" class="ml-2 btn btn-primary">DETAILS</a>
-                    <a href="{{route('abouts.edit', $item->id)}}" class="ml-2 btn btn-success">EDIT</a>
+                    <a href="{{route('abouts.show', $item->id)}}" class="ml-2 btn btn-success">DETAILS</a>
+                    <a href="{{route('abouts.edit', $item->id)}}" class="ml-2 btn btn-primary">EDIT</a>
                   </div>
                   <form method="post" action={{route('abouts.destroy', $item->id)}}>
                       @csrf

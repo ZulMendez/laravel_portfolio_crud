@@ -1,50 +1,60 @@
 @extends('layouts.back')
 
 @section('content')
-    <main id="" class="">
-        <section class="">
-            <div class="container text-center p-5">
-                <h1>BACK OFFICE | dashboard</h1>
-                <a href="{{route('home')}}" class="btn btn-secondary mx-auto my-auto p-2 rounded">Retour vers le site</a>
-                <div class="row my-3">
-                    <div class="col-6"> 
-                        <div class="card text-center mx-auto my-3">
-                            <div class="card-body">
-                                <h4 class="card-title">Modification About</h4>
-                                <p class="card-text">CRUD ABOUT</p>
-                                <a class="btn bg-success" href={{route('abouts.index')}}>ABOUT</a>
-                            </div>
+    <section class="bg-dark rounded">
+        <div class="container text-center p-5">
+            <h1 class="text-white font-weight-bold">BACK OFFICE --dashboard</h1>
+            <a href="{{route('home')}}" class="btn btn-outline-primary btn-light mx-auto my-auto p-2 rounded">Retour vers le site</a>
+            <div class="row my-3">
+                <div class="col-6"> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification about</h4>
+                            <a class="btn btn-primary" href={{route('abouts.index')}}>GO</a>
                         </div>
                     </div>
-                    <div class="col-6"> 
-                        <div class="card text-center mx-auto my-3">
-                            <div class="card-body">
-                                <h4 class="card-title">Modification skills</h4>
-                                <p class="card-text">CRUD SKILLS</p>
-                                <a class="btn bg-success" href={{route('skills.index')}}>SKILLS</a>
-                            </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification facts</h4>
+                            <a class="btn btn-primary" href={{route('facts.index')}}>GO</a>
                         </div>
                     </div>
-                    <div class="col-6"> 
-                        <div class="card text-center mx-auto my-3">
-                            <div class="card-body">
-                                <h4 class="card-title">Modification projets</h4>
-                                <p class="card-text">CRUD PROJETS</p>
-                                <a class="btn bg-success" href={{route('projets.index')}}>PROJECTS</a>
-                            </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification skills</h4>
+                            <a class="btn btn-primary" href={{route('skills.index')}}>GO</a>
                         </div>
                     </div>
-                    <div class="col-6 "> 
-                        <div class="card text-center mx-auto my-3">
-                            <div class="card-body">
-                                <h4 class="card-title">Modification contact</h4>
-                                <p class="card-text">CRUD CONTACT</p>
-                                <a class="btn bg-success" href={{route('contacts.index')}}>CONTACT</a>
-                            </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification projets</h4>
+                            <a class="btn btn-primary" href={{route('projets.index')}}>GO</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification services</h4>
+                            <a class="btn btn-primary" href={{route('servs.index')}}>GO</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 "> 
+                    <div class="card text-center mx-auto my-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Modification contact</h4>
+                            <a class="btn btn-primary" href={{route('contacts.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 @endsection

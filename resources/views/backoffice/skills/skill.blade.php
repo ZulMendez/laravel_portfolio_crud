@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{route('skills.show', $item->id)}}" class="btn btn-primary">DETAILS</a>
+                <a href="{{route('skills.show', $item->id)}}" class="btn btn-success">DETAILS</a>
                 <a href={{route('skills.edit', $item->id)}} class="btn btn-primary my-1">EDIT</a>
                 <form method="post" action={{route('skills.destroy', $item->id)}}>
                     @csrf
