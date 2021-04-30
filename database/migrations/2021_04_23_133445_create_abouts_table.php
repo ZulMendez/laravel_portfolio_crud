@@ -15,19 +15,8 @@ class CreateAboutsTable extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            // $table->string('titre', 30);
-            // $table->text('para');
-            // $table->string('soustitre', 300);
-            // $table->text('description');
-            $table->string('birthday', 30);
-            $table->string('website', 30);
-            $table->bigInteger('phone');
-            $table->string('city', 30);
-            $table->integer('age');
-            $table->string('degree', 30);
-            $table->string('email', 30);
-            $table->string('freelance', 30);
-            // $table->text('paragraphe');
+            $table->string('info', 50);
+            $table->string('value', 50);
             $table->timestamps();
         });
     }
