@@ -17,23 +17,11 @@ class AboutController extends Controller
     public function store(Request $request){
         $about = new About();
         request()->validate([
-            "birthday" => ["required", "min:3", "max:100"],
-            "website" => ["required", "min:3", "max:100"],
-            "phone" => ["required", "numeric"],
-            "city" => ["required", "min:3", "max:100"],
-            "age" => ["required", "numeric"],
-            "degree" => ["required", "min:3", "max:100"],
-            "email" => ["required", "email", "min:3", "max:50"],
-            "freelance" => ["required", "min:3", "max:50"],
+            "info" => ["required", "min:3", "max:100"],
+            "value" => ["required", "min:1", "max:100"],
         ]);
-        $about->birthday = $request->birthday;
-        $about->website = $request->website;
-        $about->phone = $request->phone;
-        $about->city = $request->city;
-        $about->age = $request->age;
-        $about->degree = $request->degree;
-        $about->email = $request->email;
-        $about->freelance = $request->freelance;
+        $about->info = $request->info;
+        $about->value = $request->value;
         $about->save();
         return redirect()->route('abouts.index')->with('success', 'Infos bien ajoutés');
     }
@@ -51,24 +39,12 @@ class AboutController extends Controller
     }
     public function update(About $id, Request $request){
         request()->validate([
-            "birthday" => ["required", "min:3", "max:100"],
-            "website" => ["required", "min:3", "max:100"],
-            "phone" => ["required", "numeric"],
-            "city" => ["required", "min:3", "max:100"],
-            "age" => ["required", "numeric"],
-            "degree" => ["required", "min:3", "max:100"],
-            "email" => ["required", "email", "min:3", "max:50"],
-            "freelance" => ["required", "min:3", "max:50"],
+            "info" => ["required", "min:3", "max:100"],
+            "value" => ["required", "min:1", "max:100"],
         ]);
         $about = $id;
-        $about->birthday = $request->birthday;
-        $about->website = $request->website;
-        $about->phone = $request->phone;
-        $about->city = $request->city;
-        $about->age = $request->age;
-        $about->degree = $request->degree;
-        $about->email = $request->email;
-        $about->freelance = $request->freelance;
+        $about->info = $request->info;
+        $about->value = $request->value;
         $about->save();
         return redirect()->route('abouts.show', $about->id)->with('success', "vos modifications ont bien été mis à jour");
     }

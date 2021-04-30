@@ -10,7 +10,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification about</h4>
-                            <a class="btn btn-primary" href={{route('abouts.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('abouts.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification facts</h4>
-                            <a class="btn btn-primary" href={{route('facts.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('facts.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification skills</h4>
-                            <a class="btn btn-primary" href={{route('skills.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('skills.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification projets</h4>
-                            <a class="btn btn-primary" href={{route('projets.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('projets.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification services</h4>
-                            <a class="btn btn-primary" href={{route('servs.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('servs.index')}}>GO</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
                             <h4 class="card-title">Modification contact</h4>
-                            <a class="btn btn-primary" href={{route('contacts.index')}}>GO</a>
+                            <a class="btn btn-success" href={{route('contacts.index')}}>GO</a>
                         </div>
                     </div>
                 </div>

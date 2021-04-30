@@ -12,40 +12,29 @@
           <div class="col-lg-4" data-aos="fade-right">
             <img src="{{asset('/img/profile-img.jpg')}}" class="img-fluid" alt="">
           </div>
-            @foreach ($about as $item)
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                 <h3>UI/UX Designer || Web Developer.</h3>
                 <p class="font-italic">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div class="row">
+                  @foreach ($about as $item)
                   <div class="col-lg-6">
                     <ul>
-                      <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> {{$item->birthday}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> {{$item->website}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> {{$item->phone}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>City:</strong> {{$item->city}}</li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6">
-                    <ul>
-                      <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> {{$item->age}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> {{$item->degree}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> {{$item->email}}</li>
-                      <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> {{$item->freelance}}</li>
+                      <li><i class="icofont-rounded-right"></i> <strong>{{$item->info}}:</strong> {{$item->value}}</li>
                     </ul>
                   </div>
                   <div class="">
-                    <a href="{{route('abouts.show', $item->id)}}" class="ml-2 btn btn-success">DETAILS</a>
                     <a href="{{route('abouts.edit', $item->id)}}" class="ml-2 btn btn-primary">EDIT</a>
                   </div>
-                  <form method="post" action={{route('abouts.destroy', $item->id)}}>
+                  @endforeach
+                  {{-- <form method="post" action={{route('abouts.destroy', $item->id)}}>
                       @csrf
                       @method('DELETE')
                       <button class="ml-2 btn btn-danger" type="submit">DELETE</button>
-                  </form>
+                  </form> --}}
             </div>
-            @endforeach
+            
         </div>
     </div>
 </div>

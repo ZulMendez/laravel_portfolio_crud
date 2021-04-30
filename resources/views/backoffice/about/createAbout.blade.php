@@ -9,72 +9,18 @@
             <form class="" method="POST" action={{route('abouts.store')}}>
                 @csrf
 
-                <label for="birthday">birthday</label>
-                <input type="text" class="form-control @error('birthday') is-invalid @enderror" id="birthday" value="{{old('birthday')}}" name="birthday">
-                @error('birthday')
+                <label for="info">Info</label>
+                <input type="text" class="form-control @error('info') is-invalid @enderror" id="info" value="{{old('info')}}" name="info">
+                @error('info')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
                     </span>
                 @enderror
                 <hr>
 
-                <label for="website">website</label>
-                <input type="text" class="form-control @error('website') is-invalid @enderror" id="website" value="{{old('website')}}" name="website">
-                @error('website')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="phone">phone</label>
-                <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" value="{{old('phone')}}" name="phone">
-                @error('phone')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="city">city</label>
-                <input type="text" class="form-control @error('city') is-invalid @enderror" id="city" value="{{old('city')}}" name="city">
-                @error('city')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="age">age</label>
-                <input type="text" class="form-control @error('age') is-invalid @enderror" id="age" value="{{old('age')}}" name="age">
-                @error('age')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="degree">degree</label>
-                <input type="text" class="form-control @error('degree') is-invalid @enderror" id="degree" value="{{old('degree')}}" name="degree">
-                @error('degree')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="email">email</label>
-                <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" value="{{old('email')}}" name="email">
-                @error('email')
-                    <span class="invalid-feedback">
-                        <strong>{{$message}}</strong>
-                    </span>
-                @enderror
-                <hr>
-
-                <label for="freelance">freelance</label>
-                <input type="text" class="form-control @error('freelance') is-invalid @enderror" id="freelance" value="{{old('freelance')}}" name="freelance">
-                @error('freelance')
+                <label for="value">Value</label>
+                <input type="text" class="form-control @error('value') is-invalid @enderror" id="value" value="{{old('value')}}" name="value">
+                @error('value')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
                     </span>
