@@ -4,9 +4,9 @@
 @section('content')
     <section id="skills" class="skills section-bg">
         <div class="container text-center">
-            <h1>Skills</h1>
-            <a class="btn btn-outline-secondary mb-2" href="{{route('skills.index')}}">Retour skills</a>
-            <div class="container card" style="width: 18rem;">
+            <h1 class="text-info">SKILL</h1>
+            <a class="btn btn-outline-secondary my-3" href="{{route('skills.index')}}">BACK</a>
+            <div class="container card" style="width: 25rem; height: auto;">
                 <div class="row d-flex justify-content-center align-items-center skills-content">
                     <div class="col-lg-12" data-aos="fade-up">
                         <div class="progress mt-4">

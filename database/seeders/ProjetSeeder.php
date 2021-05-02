@@ -16,47 +16,47 @@ class ProjetSeeder extends Seeder
     {
         DB::table('projets')->insert([
             [
-                "img" => "img/portfolio/portfolio-1.jpg",
+                "img" => "portfolio-1.jpg",
                 "filter" => "filter-app",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-2.jpg",
+                "img" => "portfolio-2.jpg",
                 "filter" => "filter-card",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-3.jpg",
+                "img" => "portfolio-3.jpg",
                 "filter" => "filter-app",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-4.jpg",
+                "img" => "portfolio-4.jpg",
                 "filter" => "filter-web",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-5.jpg",
+                "img" => "portfolio-5.jpg",
                 "filter" => "filter-app",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-6.jpg",
+                "img" => "portfolio-6.jpg",
                 "filter" => "filter-card",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-7.jpg",
+                "img" => "portfolio-7.jpg",
                 "filter" => "filter-web",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-8.jpg",
+                "img" => "portfolio-8.jpg",
                 "filter" => "filter-web",
                 "created_at" => now(),
             ],
             [
-                "img" => "img/portfolio/portfolio-9.jpg",
+                "img" => "portfolio-9.jpg",
                 "filter" => "filter-card",
                 "created_at" => now(),
             ],

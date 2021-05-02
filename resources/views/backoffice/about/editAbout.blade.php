@@ -3,14 +3,15 @@
 @section('content')
 <main id="" class="">
     <section class="">
-        <div class="container">
-            <h1 class="text-center">Editer formulaire about</h1>
-            <a class="btn btn-outline-secondary mb-2" href="{{route('abouts.index')}}">Retour About</a>
-            <form class="" method="POST" action={{route('abouts.update', $about->id)}}>
+        <div class="container text-center">
+            <h1 class="text-info">EDIT</h1>
+            <a class="btn btn-outline-secondary mb-2" href="{{route('abouts.index')}}">BACK</a>
+            <form class="container col-6" method="POST" action={{route('abouts.update', $about->id)}}>
                 @csrf
                 @method('PUT')
-                <label for="info">{{$about->info}}</label>
-                <input type="text" class="form-control @error('info') is-invalid @enderror" id="info" value="{{old('info')}}" name="info">
+                <br>
+                <label class="font-weight-bold" for="info">TITLE</label>
+                <input type="text" class="form-control @error('info') is-invalid @enderror" id="info" placeholder="{{$about->info}}" name="info">
                 @error('info')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
@@ -18,15 +19,15 @@
                 @enderror
                 <hr>
 
-                <label for="value">{{$about->value}}</label>
-                <input type="text" class="form-control @error('value') is-invalid @enderror" id="value" value="{{old('value')}}" name="value">
+                <label class="font-weight-bold" for="value">TEXT</label>
+                <input type="text" class="form-control @error('value') is-invalid @enderror" id="value" placeholder="{{$about->value}}" name="value">
                 @error('value')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
                     </span>
                 @enderror
                 <hr>
-                <button type="submit">Submit</button>
+                <button class="btn btn-info" type="submit">SUBMIT</button>
             </form>
         </div>
     </section>

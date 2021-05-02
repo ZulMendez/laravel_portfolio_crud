@@ -3,8 +3,8 @@
 @include('layouts.flash')
 @section('content')
     <div class="text-center">
-        <h1>About</h1>
-        <a class="btn btn-outline-secondary mb-2" href="{{route('abouts.index')}}">Retour About</a>
+        <h1 class="text-center text-info">ABOUT</h1>
+        <a class="btn btn-outline-secondary mb-2" href="{{route('abouts.index')}}">BACK</a>
         <div class="card">
             <div class="card-body d-flex justify-content-around">
                 <div>

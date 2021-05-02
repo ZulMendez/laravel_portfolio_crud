@@ -3,28 +3,34 @@
 @section('content')
 <main id="" class="">
     <section class="">
-        <div class="container">
-            <h1 class="text-center">Formulaire d'ajout</h1>
-            <a class="btn btn-outline-secondary mb-2" href="{{route('projets.index')}}">Retour projet</a>
-            <form class="" method="POST" action={{route('projets.store')}}>
+        <div class="container text-center">
+            <h1 class="text-info">ADD</h1>
+            <a class="btn btn-outline-secondary mb-2" href="{{route('projets.index')}}">BACK</a>
+            <form class="container col-6" method="POST" action={{route('projets.store')}} enctype="multipart/form-data">
                 @csrf
-                <label for="img">Img</label>
-                <input type="text" class="form-control @error('img') is-invalid @enderror" id="img" value="{{old('img')}}" name="img">
+                <br>
+                <label class="font-weight-bold" for="img">IMAGE</label>
+                <input type="file" class="form-control-file @error('img') is-invalid @enderror" id="img" placeholder="add image" name="img">
+                {{-- @dump('test') --}}
                 @error('img')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
                     </span>
                 @enderror
                 <hr>
-                <label for="filter">Filter</label>
-                <input type="text" class="form-control @error('filter') is-invalid @enderror" id="filter" value="{{old('filter')}}" name="filter">
+                <label class="font-weight-bold" for="filter">FILTER</label>
+                <select type="text" class="form-control-file @error('filter') is-invalid @enderror" id="filter" placeholder="add filter" name="filter" placeholder="filter">
+                    <option value="filter-app">filter-app</option>
+                    <option value="filter-card">filter-card</option>
+                    <option value="filter-web">filter-web</option>
+                </select>
                 @error('filter')
                     <span class="invalid-feedback">
                         <strong>{{$message}}</strong>
                     </span>
                 @enderror
                 <hr>
-                <button type="submit">Submit</button>
+                <button class="btn btn-info" type="submit">SUBMIT</button>
             </form>
         </div>
     </section>

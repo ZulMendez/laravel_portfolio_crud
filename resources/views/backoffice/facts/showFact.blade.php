@@ -4,8 +4,8 @@
 @section('content')
     <section id="facts" class="facts section-bg">
         <div class="container text-center">
-            <h1>Facts</h1>
-            <a class="btn btn-outline-secondary mb-2" href="{{route('facts.index')}}">Retour facts</a>
+            <h1 class="text-center text-info">FACT</h1>
+            <a class="btn btn-outline-secondary mb-2" href="{{route('facts.index')}}">BACK</a>
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center facts-content">
                     <div class="col-lg-6 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">

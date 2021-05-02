@@ -3,18 +3,18 @@
 @include('layouts.flash')
 @section('content')
 <div class="container my-5">
-    <h1 class="text-center">Page About</h1>
+    <h1 class="text-center text-info">ABOUT</h1>
     <div class="d-flex justify-content-around my-2">
-        <a class="btn btn-outline-secondary" href={{route('admin')}}>Retour backoffice</a>
+        <a class="btn btn-outline-secondary" href={{route('admin')}}>BACKOFFICE</a>
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-lg-4" data-aos="fade-right">
             <img src="{{asset('/img/profile-img.jpg')}}" class="img-fluid" alt="">
           </div>
-            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                <h3>UI/UX Designer || Web Developer.</h3>
-                <p class="font-italic">
+            <div class="col-lg-8 pt-4 pt-lg-0 mt-2 content" data-aos="fade-left">
+                <h3 class="text-primary">UI/UX Designer || Web Developer.</h3>
+                <p class="">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div class="row">

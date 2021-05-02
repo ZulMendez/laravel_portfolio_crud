@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Projet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjetController extends Controller
 {
@@ -15,18 +16,24 @@ class ProjetController extends Controller
         return view('backoffice.projets.createProjet');
     }
     public function store(Request $request){
-        $projet = new Projet();
+        // dd($request->file('img'));
         request()->validate([
-            "img" => ["required", "min:3", "max:100"],
+            "img" => ["required"],
             "filter" => ["required", "min:3", "max:100"],
         ]);
-        $projet->img = $request->img;
+        // storage via input
+        $request->file('img')->storePublicly('img/portfolio/','public');
+
+        // DB
+        $projet = new Projet();
+        $projet->img = $request->file('img')->hashName();
         $projet->filter = $request->filter;
         $projet->save();
         return redirect()->route('projets.index')->with('success', 'Infos bien ajoutés');
     }
     public function destroy(Projet $id){
         $id->delete();
+        Storage::disk('public')->delete('img/portfolio/' . $id->img);
         return redirect()->back();
     }
     public function show(Projet $id){
@@ -39,11 +46,20 @@ class ProjetController extends Controller
     }
     public function update(Projet $id, Request $request){
         request()->validate([
-            "img" => ["required", "min:3", "max:100"],
+            "img" => ["required"],
+            "filter" => ["required", "min:3", "max:100"],
         ]);
         $projet = $id;
-        $projet->img = $request->img;
-        $projet->save();
-        return redirect()->route('projets.show', $projet->id)->with('success', "vos modifications ont bien été mis à jour");
+        if ($request->file('img') != null){
+            Storage::disk('public')->delete('img/portfolio/' . $id->img);
+            $request->file('img')->storePublicly('img/portfolio/' , 'public');
+
+            // DB 
+            $projet->img = $request->file('img')->hashName();
+            $projet->filter = $request->filter;
+            $projet->save();
+        }
+        
+        return redirect()->route('admin')->with('success', "vos modifications ont bien été mis à jour");
     }
 }

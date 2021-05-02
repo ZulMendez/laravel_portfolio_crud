@@ -23,10 +23,10 @@
           <div class="col-lg-4 col-md-6 portfolio-item {{$projet->filter}}">
       
             <div class="portfolio-wrap">
-              <img src={{$projet->img}} class="img-fluid" alt="">
+              <img src={{asset('img/portfolio/' . $projet->img)}} class="img-fluid" alt="">
               <div class="portfolio-links d-flex justify-content-center my-3">
                 <div class="portfolio-links">
-                  <a href={{asset('img/portfolio/portfolio-1.jpg')}} data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href={{asset('img/portfolio/' . $projet->img)}} data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
