@@ -2,10 +2,14 @@
 
 @section('content')
     <section class="bg-dark rounded">
-        <div class="container text-center p-5">
-            <h1 class="text-white font-weight-bold">BACK OFFICE --dashboard</h1>
-            <a href="{{route('home')}}" class="btn btn-outline-success mx-auto my-auto p-2 rounded">BACK WEBSITE</a>
-            <div class="row my-3">
+        <div class="container text-center px-4">
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <img src={{asset('/img/profile-img.jpg')}} alt="" style="width: 5rem; height: 5rem;" class="mr-3 mt-2 img-fluid rounded-circle">
+                <h2 class="text-white font-weight-bold">BACKOFFICE</h2>
+            </div>
+            <h4 class="text-white font-weight-bold"> Dashboard</h4>
+            <a href="{{route('home')}}" class="btn btn-outline-success mx-auto my-auto p-1 rounded">WEBSITE</a>
+            <div class="row my-1">
                 <div class="col-6"> 
                     <div class="card text-center mx-auto my-3">
                         <div class="card-body">
